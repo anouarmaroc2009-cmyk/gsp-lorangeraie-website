@@ -1,161 +1,255 @@
-// ===========================
-// MOBILE MENU TOGGLE
-// ===========================
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driss El Aliti - Directeur Pédagogique | GSP L'Orangeraie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>GSP L'Orangeraie</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Accueil</a>
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
+                <a href="#levels" class="nav-link">Niveaux</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">GSP L'Orangeraie</h1>
+            <p class="hero-tagline">L'excellence au cœur de votre avenir</p>
+            <button class="cta-btn">Nous Contacter</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Qui Sommes-Nous ?</h2>
+            <div class="about-content fade-in">
+                <p>
+                    GSP L'Orangeraie est un groupe scolaire privé situé au Quartier Les Orangers, Rabat, Maroc 10100. 
+                    Nous offrons une éducation secondaire de qualité du Collège au Lycée, guidant nos étudiants jusqu'au Baccalauréat. 
+                    Notre engagement est de cultiver l'excellence académique et le développement personnel de chaque élève.
+                </p>
+            </div>
+        </div>
+    </section>
 
-// Close menu when a nav link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
+    <!-- Leadership Section - Driss El Aliti Premium Profile -->
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <h2 class="section-title">Directeur Pédagogique</h2>
+            
+            <!-- Premium Profile Card -->
+            <div class="driss-premium-profile fade-in">
+                <!-- Portrait Section (LEFT SIDE) -->
+                <div class="driss-portrait-section">
+                    <div class="portrait-wrapper">
+                        <!-- Main Portrait -->
+                        <div class="driss-portrait" style="background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 80px; border-radius: 20px; overflow: hidden;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        
+                        <!-- Educational Metrics Overlaid -->
+                        <div class="metric-badge metric-students">
+                            <div class="metric-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value">2000+</div>
+                                <div class="metric-label">Étudiants</div>
+                            </div>
+                        </div>
 
-// ===========================
-// SMOOTH SCROLL FOR CTA BUTTON
-// ===========================
+                        <div class="metric-badge metric-experience">
+                            <div class="metric-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value">30+</div>
+                                <div class="metric-label">Ans Expérience</div>
+                            </div>
+                        </div>
 
-const ctaBtn = document.querySelector('.cta-btn');
-const contactSection = document.getElementById('contact');
+                        <div class="metric-badge metric-success">
+                            <div class="metric-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value">98%</div>
+                                <div class="metric-label">Réussite</div>
+                            </div>
+                        </div>
 
-ctaBtn.addEventListener('click', () => {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-});
+                        <div class="metric-badge metric-innovation">
+                            <div class="metric-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="metric-content">
+                                <div class="metric-value">50+</div>
+                                <div class="metric-label">Innovations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-// ===========================
-// FORM SUBMISSION HANDLER
-// ===========================
+                <!-- Professional Profile Content (RIGHT SIDE) -->
+                <div class="driss-profile-content">
+                    <div class="profile-header">
+                        <h1 class="profile-name">Driss El Aliti</h1>
+                        <p class="profile-title">Directeur Pédagogique Émérite</p>
+                        <div class="profile-subtitle">GSP L'Orangeraie</div>
+                    </div>
 
-const contactForm = document.getElementById('contactForm');
+                    <div class="profile-description">
+                        <p>
+                            Fort de plus de trois décennies de leadership éducatif exceptionnel, Driss El Aliti incarne l'excellence pédagogique et l'innovation dans la transmission intergénérationnelle. Figure de proue mondialement reconnue pour son intégrité intellectuelle et son dévouement indéfectible à l'éducation, il orchestre avec panache des environnements d'apprentissage stimulants, novateurs et inclusifs.
+                        </p>
+                        <p>
+                            Son expertise magistrale en stratégie éducative, son engagement envers l'excellence académique, et sa vision avant-gardiste de l'enseignement moderne en font un directeur pédagogique émérite, unanimement respecté et salué par ses pairs dans la communauté éducative nationale et internationale.
+                        </p>
+                    </div>
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const name    = formData.get('name')    || contactForm.querySelector('input[type="text"]').value;
-    const email   = formData.get('email')   || contactForm.querySelector('input[type="email"]').value;
-    const message = formData.get('message') || contactForm.querySelector('textarea').value;
+                    <div class="profile-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Excellence Pédagogique</h4>
+                                <p>Leadership reconnu dans l'innovation éducative</p>
+                            </div>
+                        </div>
 
-    if (!name.trim() || !email.trim() || !message.trim()) {
-        alert('Veuillez remplir tous les champs du formulaire.');
-        return;
-    }
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Vision Académique</h4>
+                                <p>Stratégie d'enseignement progressive et inclusive</p>
+                            </div>
+                        </div>
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Veuillez entrer une adresse email valide.');
-        return;
-    }
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Leadership Inspirant</h4>
+                                <p>Guide des étudiants vers le succès durable</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    alert('Merci pour votre message! Nous vous contacterons bientôt.');
-    contactForm.reset();
-});
+    <!-- Levels Section -->
+    <section id="levels" class="levels">
+        <div class="container">
+            <h2 class="section-title">Niveaux Proposés</h2>
+            <div class="levels-grid">
+                <div class="level-card fade-in">
+                    <div class="level-icon">
+                        <i class="fas fa-backpack"></i>
+                    </div>
+                    <h3>Collège</h3>
+                    <p>Éducation au niveau du secondaire inférieur, fondation solide pour les études futures.</p>
+                </div>
+                <div class="level-card fade-in">
+                    <div class="level-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Lycée</h3>
+                    <p>Éducation au niveau du secondaire supérieur menant au Baccalauréat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// ===========================
-// SCROLL ANIMATIONS
-// ===========================
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:+212666134207">0666 13 42 07</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Localisation</h4>
+                            <p>Quartier Les Orangers, Rabat, Maroc 10100</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Instagram</h4>
+                            <p><a href="https://www.instagram.com/lorangeraie_highschool/" target="_blank">@lorangeraie_highschool</a></p>
+                        </div>
+                    </div>
+                </div>
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 GSP L'Orangeraie - Tous droits réservés</p>
+            <a href="https://www.instagram.com/lorangeraie_highschool/" target="_blank" class="footer-social">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
 
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-
-// ===========================
-// NAVBAR SCROLL EFFECT
-// ===========================
-
-const navbar = document.querySelector('.navbar');
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    navbar.style.boxShadow = scrollTop > 0
-        ? '0 2px 20px rgba(0, 0, 0, 0.1)'
-        : '0 2px 10px rgba(0, 0, 0, 0.08)';
-    lastScrollTop = scrollTop;
-});
-
-// ===========================
-// ACTIVE NAV LINK ON SCROLL
-// ===========================
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-
-    sections.forEach(section => {
-        if (pageYOffset >= section.offsetTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.style.color      = 'var(--deep-green)';
-            link.style.fontWeight = '600';
-        } else {
-            link.style.color      = 'var(--dark-text)';
-            link.style.fontWeight = '500';
-        }
-    });
-});
-
-// ===========================
-// CARD HOVER ANIMATION
-// ===========================
-
-const levelCards = document.querySelectorAll('.level-card');
-
-levelCards.forEach(card => {
-    card.addEventListener('mouseenter', () => { card.style.transform = 'translateY(-10px)'; });
-    card.addEventListener('mouseleave', () => { card.style.transform = 'translateY(0)'; });
-});
-
-// ===========================
-// PAGE LOAD ANIMATION
-// ===========================
-
-window.addEventListener('load', () => {
-    document.querySelectorAll('.fade-in').forEach((el, index) => {
-        setTimeout(() => {
-            el.style.opacity   = '1';
-            el.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
-});
-
-// ===========================
-// SMOOTH SCROLL LINKS
-// ===========================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && document.querySelector(href)) {
-            e.preventDefault();
-            document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
+    <script src="script.js"></script>
+</body>
+</html>
