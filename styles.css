@@ -1,17 +1,23 @@
-/* --- GSP L'Orangeraie Theme Color Overrides --- */
+/* ==========================================================================
+   GSP L'Orangeraie - Orange & Green Theme Color Overrides
+   ========================================================================== */
 
 :root {
-  /* Define the new palette */
+  /* Core Brand Palette */
   --primary-orange: #FF7A00;
   --primary-orange-hover: #E06B00;
   --primary-green: #1E5631;
+  --primary-green-dark: #11331C;
   --primary-green-light: #A4DE02;
+  
+  /* Layout & Typography */
   --text-dark: #2C3E50;
-  --bg-light: #FFF9F2; /* Soft warm background tint */
+  --bg-light: #FFF9F2; /* Warm, welcoming background tint */
 }
 
 /* 1. Header & Navigation */
-.navbar, header {
+.navbar, 
+header {
   background-color: var(--primary-green) !important;
 }
 
@@ -21,64 +27,72 @@ header a {
 }
 
 .navbar .nav-link:hover, 
-.navbar .nav-link.active {
+.navbar .nav-link.active,
+header a:hover {
   color: var(--primary-orange) !important;
   border-bottom: 2px solid var(--primary-orange);
 }
 
 /* 2. Hero Section */
 #hero {
-  background: linear-gradient(135deg, var(--primary-green) 0%, #11331C 100%) !important;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%) !important;
 }
 
 #hero h1 {
   color: var(--primary-orange) !important;
 }
 
-/* 3. Buttons & Call to Actions */
+/* 3. Buttons & Action Links */
 .btn-primary, 
 a.btn-custom,
 button[type="submit"] {
   background-color: var(--primary-orange) !important;
   border-color: var(--primary-orange) !important;
   color: #FFFFFF !important;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover, 
 a.btn-custom:hover,
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.btn-primary:focus,
+button[type="submit"]:focus {
   background-color: var(--primary-orange-hover) !important;
   border-color: var(--primary-orange-hover) !important;
+  color: #FFFFFF !important;
 }
 
-/* 4. Headings & Accents across Sections (#about, #leadership, #levels) */
-h2, h3, h4, .section-title {
+/* 4. Headings & Accents (#about, #leadership, #levels) */
+h2, h3, h4, 
+.section-title {
   color: var(--primary-green) !important;
 }
 
-/* Section title accent underlines/decorations */
+/* Section title accent underlines */
 .section-title::after, 
 .title-line {
   background-color: var(--primary-orange) !important;
 }
 
-/* 5. Section Background alternating styles */
-.bg-light-custom, #about {
+/* 5. Section Backgrounds */
+.bg-light-custom, 
+#about {
   background-color: var(--bg-light) !important;
 }
 
-/* 6. Levels/Cards Border or Icons */
+/* 6. Cards, Grid Boxes & Icons */
 .card-icon, 
 .level-box i,
-#levels .icon-box {
+#levels .icon-box,
+.feature-icon {
   color: var(--primary-orange) !important;
-  background-color: rgba(255, 122, 0, 0.1) !important; /* Soft orange glow */
+  background-color: rgba(255, 122, 0, 0.1) !important; /* Translucent orange glow */
 }
 
 .card:hover, 
 .level-box:hover {
   border-color: var(--primary-green) !important;
+  box-shadow: 0 4px 15px rgba(30, 86, 49, 0.15) !important;
 }
 
 /* 7. Contact Section & Footer */
@@ -87,14 +101,17 @@ h2, h3, h4, .section-title {
 }
 
 footer {
-  background-color: #11331C !important; /* Deep dark green */
+  background-color: var(--primary-green-dark) !important;
   color: #E0E0E0 !important;
   border-top: 4px solid var(--primary-orange);
 }
 
 footer a {
   color: var(--primary-orange) !important;
+  text-decoration: none;
 }
+
 footer a:hover {
   color: var(--primary-orange-hover) !important;
+  text-decoration: underline;
 }
