@@ -1,830 +1,100 @@
-/* ===========================
-   GLOBAL & VARIABLES
-   =========================== */
+/* --- GSP L'Orangeraie Theme Color Overrides --- */
 
 :root {
-    --deep-green: #2d6a4f;
-    --light-green: #95d5b2;
-    --white: #ffffff;
-    --soft-orange: #f4a261;
-    --dark-text: #1b3a3a;
-    --light-text: #6b7280;
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
+  /* Define the new palette */
+  --primary-orange: #FF7A00;
+  --primary-orange-hover: #E06B00;
+  --primary-green: #1E5631;
+  --primary-green-light: #A4DE02;
+  --text-dark: #2C3E50;
+  --bg-light: #FFF9F2; /* Soft warm background tint */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 1. Header & Navigation */
+.navbar, header {
+  background-color: var(--primary-green) !important;
 }
 
-html {
-    scroll-behavior: smooth;
+.navbar .nav-link, 
+header a {
+  color: #FFFFFF !important;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--white);
-    color: var(--dark-text);
-    line-height: 1.6;
-    overflow-x: hidden;
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+  color: var(--primary-orange) !important;
+  border-bottom: 2px solid var(--primary-orange);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* 2. Hero Section */
+#hero {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #11331C 100%) !important;
 }
 
-/* ===========================
-   NAVIGATION BAR
-   =========================== */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-    transition: var(--transition);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--deep-green);
-    text-decoration: none;
-}
-
-.nav-logo i {
-    font-size: 1.8rem;
-    color: var(--soft-orange);
-}
-
-.nav-menu {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--dark-text);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    position: relative;
-}
-
-.nav-link:hover {
-    color: var(--deep-green);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--soft-orange);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* ===========================
-   HERO SECTION
-   =========================== */
-
-.hero {
-    margin-top: 70px;
-    height: 600px;
-    background: linear-gradient(135deg, var(--deep-green) 0%, #1f4a38 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    color: var(--white);
-}
-
-.hero-content {
-    z-index: 2;
-    position: relative;
-}
-
-.hero-title {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    animation: slideIn 1s ease;
-}
-
-.hero-tagline {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: 300;
-    color: var(--light-green);
-}
-
-.cta-btn {
-    padding: 15px 40px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: var(--soft-orange);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4);
-}
-
-.cta-btn:hover {
-    background-color: #e89450;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(244, 162, 97, 0.6);
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* ===========================
-   ABOUT SECTION
-   =========================== */
-
-.about {
-    padding: 80px 0;
-    background-color: var(--white);
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--deep-green);
-    margin-bottom: 50px;
-    font-weight: 700;
-}
-
-.about-content {
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1), rgba(149, 213, 178, 0.1));
-    padding: 40px;
-    border-radius: 15px;
-    border-left: 5px solid var(--soft-orange);
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--dark-text);
-}
-
-/* ===========================
-   LEADERSHIP SECTION - DRISS EL ALITI PREMIUM PROFILE
-   =========================== */
-
-.leadership {
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.05) 0%, rgba(149, 213, 178, 0.05) 100%);
-}
-
-.driss-premium-profile {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: stretch;
-    background: var(--white);
-    padding: 50px;
-    border-radius: 25px;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.driss-premium-profile::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--deep-green), var(--soft-orange), var(--light-green));
-}
-
-/* Portrait Section */
-.driss-portrait-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portrait-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    aspect-ratio: 1;
-}
-
-.driss-portrait {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-    border: 3px solid var(--soft-orange);
-}
-
-/* Metric Badges - Positioned around portrait */
-.metric-badge {
-    position: absolute;
-    background: var(--white);
-    border-radius: 15px;
-    padding: 15px 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 2px solid var(--light-green);
-    backdrop-filter: blur(10px);
-    transition: var(--transition);
-}
-
-.metric-badge:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-}
-
-.metric-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--deep-green), var(--light-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.metric-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.metric-value {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--deep-green);
-}
-
-.metric-label {
-    font-size: 0.75rem;
-    color: var(--light-text);
-    font-weight: 500;
-}
-
-/* Metric Badge Positioning */
-.metric-students {
-    top: -15px;
-    left: -15px;
-}
-
-.metric-experience {
-    top: -15px;
-    right: -15px;
-}
-
-.metric-success {
-    bottom: -15px;
-    left: -15px;
-}
-
-.metric-innovation {
-    bottom: -15px;
-    right: -15px;
-}
-
-/* Profile Content Section */
-.driss-profile-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-.profile-header {
-    margin-bottom: 30px;
-    border-bottom: 3px solid var(--light-green);
-    padding-bottom: 20px;
-}
-
-.profile-name {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--deep-green);
-    margin-bottom: 8px;
-}
-
-.profile-title {
-    font-size: 1.3rem;
-    color: var(--soft-orange);
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.profile-subtitle {
-    font-size: 0.95rem;
-    color: var(--light-text);
-    font-weight: 500;
-}
-
-.profile-description {
-    margin-bottom: 30px;
-}
-
-.profile-description p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--dark-text);
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.profile-description p:last-child {
-    margin-bottom: 0;
-}
-
-/* Profile Highlights */
-.profile-highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+#hero h1 {
+  color: var(--primary-orange) !important;
 }
 
-.highlight-item {
-    display: flex;
-    gap: 15px;
-    padding: 15px;
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.05), rgba(149, 213, 178, 0.05));
-    border-radius: 12px;
-    border-left: 4px solid var(--soft-orange);
-    transition: var(--transition);
+/* 3. Buttons & Call to Actions */
+.btn-primary, 
+a.btn-custom,
+button[type="submit"] {
+  background-color: var(--primary-orange) !important;
+  border-color: var(--primary-orange) !important;
+  color: #FFFFFF !important;
+  transition: all 0.3s ease;
 }
 
-.highlight-item:hover {
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1), rgba(149, 213, 178, 0.1));
-    transform: translateX(5px);
+.btn-primary:hover, 
+a.btn-custom:hover,
+button[type="submit"]:hover {
+  background-color: var(--primary-orange-hover) !important;
+  border-color: var(--primary-orange-hover) !important;
 }
 
-.highlight-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, var(--deep-green), var(--light-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.3rem;
-    flex-shrink: 0;
+/* 4. Headings & Accents across Sections (#about, #leadership, #levels) */
+h2, h3, h4, .section-title {
+  color: var(--primary-green) !important;
 }
 
-.highlight-text h4 {
-    font-size: 0.95rem;
-    color: var(--deep-green);
-    margin-bottom: 3px;
-    font-weight: 600;
+/* Section title accent underlines/decorations */
+.section-title::after, 
+.title-line {
+  background-color: var(--primary-orange) !important;
 }
 
-.highlight-text p {
-    font-size: 0.85rem;
-    color: var(--light-text);
-    margin: 0;
+/* 5. Section Background alternating styles */
+.bg-light-custom, #about {
+  background-color: var(--bg-light) !important;
 }
 
-/* ===========================
-   LEVELS SECTION
-   =========================== */
-
-.levels {
-    padding: 80px 0;
-    background-color: var(--white);
-}
-
-.levels-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.level-card {
-    padding: 40px;
-    background: linear-gradient(135deg, var(--deep-green), #1f4a38);
-    border-radius: 15px;
-    text-align: center;
-    color: var(--white);
-    transition: var(--transition);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.level-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.level-icon {
-    font-size: 3rem;
-    color: var(--soft-orange);
-    margin-bottom: 20px;
-}
-
-.level-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.level-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* ===========================
-   CONTACT SECTION
-   =========================== */
-
-.contact {
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1), rgba(149, 213, 178, 0.05));
-}
-
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.info-item {
-    display: flex;
-    gap: 20px;
-}
-
-.info-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--deep-green), var(--light-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.info-text h4 {
-    font-size: 1.1rem;
-    color: var(--deep-green);
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.info-text p {
-    color: var(--light-text);
-}
-
-.info-text a {
-    color: var(--deep-green);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.info-text a:hover {
-    color: var(--soft-orange);
-    text-decoration: underline;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 15px;
-    border: 2px solid var(--light-green);
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--deep-green);
-    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
-}
-
-.submit-btn {
-    padding: 15px;
-    background: linear-gradient(135deg, var(--deep-green), #1f4a38);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
-}
-
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
-}
-
-/* ===========================
-   FOOTER
-   =========================== */
-
-.footer {
-    background: var(--deep-green);
-    color: var(--white);
-    text-align: center;
-    padding: 30px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-social {
-    width: 40px;
-    height: 40px;
-    background: var(--soft-orange);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-social:hover {
-    background: #e89450;
-    transform: scale(1.1);
-}
-
-/* ===========================
-   ANIMATIONS
-   =========================== */
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* 6. Levels/Cards Border or Icons */
+.card-icon, 
+.level-box i,
+#levels .icon-box {
+  color: var(--primary-orange) !important;
+  background-color: rgba(255, 122, 0, 0.1) !important; /* Soft orange glow */
 }
 
-/* ===========================
-   HAMBURGER MENU (Mobile)
-   =========================== */
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+.card:hover, 
+.level-box:hover {
+  border-color: var(--primary-green) !important;
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--deep-green);
-    border-radius: 2px;
-    transition: var(--transition);
+/* 7. Contact Section & Footer */
+#contact i {
+  color: var(--primary-orange) !important;
 }
-
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
-
-@media (max-width: 1024px) {
-    .driss-premium-profile {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px;
-    }
 
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
+footer {
+  background-color: #11331C !important; /* Deep dark green */
+  color: #E0E0E0 !important;
+  border-top: 4px solid var(--primary-orange);
 }
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        padding: 20px;
-        gap: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-tagline {
-        font-size: 1rem;
-    }
 
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .driss-premium-profile {
-        padding: 30px;
-    }
-
-    .profile-name {
-        font-size: 2rem;
-    }
-
-    .profile-title {
-        font-size: 1.1rem;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .metric-badge {
-        padding: 10px 15px;
-        font-size: 0.85rem;
-    }
-
-    .metric-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
-    .metric-value {
-        font-size: 1rem;
-    }
-
-    .metric-label {
-        font-size: 0.65rem;
-    }
+footer a {
+  color: var(--primary-orange) !important;
 }
-
-@media (max-width: 480px) {
-    .nav-logo {
-        font-size: 1.2rem;
-    }
-
-    .hero {
-        height: 400px;
-    }
-
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .hero-tagline {
-        font-size: 0.9rem;
-    }
-
-    .cta-btn {
-        padding: 12px 30px;
-        font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-    }
-
-    .driss-premium-profile {
-        padding: 20px;
-        border-radius: 15px;
-    }
-
-    .profile-name {
-        font-size: 1.5rem;
-    }
-
-    .profile-title {
-        font-size: 1rem;
-    }
-
-    .profile-description p {
-        font-size: 0.9rem;
-    }
-
-    .about-content {
-        padding: 25px;
-    }
-
-    .about-content p {
-        font-size: 1rem;
-    }
-
-    .levels-grid {
-        gap: 20px;
-    }
-
-    .level-card {
-        padding: 25px;
-    }
-
-    .level-card h3 {
-        font-size: 1.2rem;
-    }
+footer a:hover {
+  color: var(--primary-orange-hover) !important;
 }
