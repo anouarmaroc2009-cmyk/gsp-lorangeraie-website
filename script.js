@@ -1,10 +1,8 @@
-// ── Navbar scroll effect ──
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ── Hamburger toggle ──
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
@@ -14,7 +12,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
-// ── Fade-in scroll animations ──
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -25,17 +22,15 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// ── CTA button scroll ──
 document.querySelector('.cta-btn').addEventListener('click', () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 });
 
-// ── Form submission ──
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.submit-btn');
     const original = btn.textContent;
-    btn.textContent = 'Message envoyé ✓';
+    btn.textContent = 'Message envoye';
     btn.style.background = 'linear-gradient(135deg, #1E5631 0%, #0A1F10 100%)';
     setTimeout(() => {
         btn.textContent = original;
