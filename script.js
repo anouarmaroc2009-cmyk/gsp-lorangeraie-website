@@ -1,184 +1,45 @@
-// ===========================
-// MOBILE MENU TOGGLE
-// ===========================
+// ── Navbar scroll effect ──
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
 
+// ── Hamburger toggle ──
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
-
-// Close menu when a nav link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
-// ===========================
-// SMOOTH SCROLL FOR CTA BUTTON
-// ===========================
-
-const ctaBtn = document.querySelector('.cta-btn');
-const contactSection = document.getElementById('contact');
-
-ctaBtn.addEventListener('click', () => {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-});
-
-// ===========================
-// FORM SUBMISSION HANDLER
-// ===========================
-
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const name = formData.get('name') || contactForm.querySelector('input[type="text"]').value;
-    const email = formData.get('email') || contactForm.querySelector('input[type="email"]').value;
-    const message = formData.get('message') || contactForm.querySelector('textarea').value;
-
-    // Simple validation
-    if (!name.trim() || !email.trim() || !message.trim()) {
-        alert('Veuillez remplir tous les champs du formulaire.');
-        return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Veuillez entrer une adresse email valide.');
-        return;
-    }
-
-    // Show success message
-    alert('Merci pour votre message! Nous vous contacterons bientôt.');
-    
-    // Reset form
-    contactForm.reset();
-});
-
-// ===========================
-// SCROLL ANIMATIONS
-// ===========================
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
+// ── Fade-in scroll animations ──
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-// Observe all fade-in elements
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── CTA button scroll ──
+document.querySelector('.cta-btn').addEventListener('click', () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 });
 
-// ===========================
-// NAVBAR SCROLL EFFECT
-// ===========================
-
-const navbar = document.querySelector('.navbar');
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Add shadow on scroll
-    if (scrollTop > 0) {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.08)';
-    }
-    
-    lastScrollTop = scrollTop;
-});
-
-// ===========================
-// ACTIVE NAV LINK ON SCROLL
-// ===========================
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.style.color = 'var(--deep-green)';
-            link.style.fontWeight = '600';
-        } else {
-            link.style.color = 'var(--dark-text)';
-            link.style.fontWeight = '500';
-        }
-    });
-});
-
-// ===========================
-// CARD HOVER ANIMATION
-// ===========================
-
-const levelCards = document.querySelectorAll('.level-card');
-
-levelCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-    });
-});
-
-// ===========================
-// PAGE LOAD ANIMATION
-// ===========================
-
-window.addEventListener('load', () => {
-    // Fade in elements on page load
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach((el, index) => {
-        setTimeout(() => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }, index * 100);
-    });
-});
-
-// ===========================
-// SMOOTH SCROLL LINKS
-// ===========================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && document.querySelector(href)) {
-            e.preventDefault();
-            document.querySelector(href).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+// ── Form submission ──
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.submit-btn');
+    const original = btn.textContent;
+    btn.textContent = 'Message envoyé ✓';
+    btn.style.background = 'linear-gradient(135deg, #1E5631 0%, #0A1F10 100%)';
+    setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+    }, 3000);
+    this.reset();
 });
