@@ -1,405 +1,208 @@
-:root {
-    --orange: #FF7A00;
-    --orange-dark: #E06B00;
-    --orange-light: #FF9E40;
-    --green: #1E5631;
-    --green-dark: #11331C;
-    --green-darker: #0A1F10;
-    --bg-warm: #FFF9F2;
-    --bg-card: #FFFFFF;
-    --text-dark: #1A1A2E;
-    --text-muted: #5A5A7A;
-    --shadow: 0 8px 32px rgba(0,0,0,0.08);
-    --shadow-hover: 0 12px 40px rgba(255,122,0,0.15);
-    --radius: 16px;
-    --radius-sm: 10px;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driss El Aliti - Directeur Pédagogique | GSP L'Orangeraie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>GSP L'Orangeraie</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Accueil</a>
+                <a href="#about" class="nav-link">A propos</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
+                <a href="#levels" class="nav-link">Niveaux</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">GSP L'Orangeraie</h1>
+            <p class="hero-tagline">L'excellence au coeur de votre avenir</p>
+            <button class="cta-btn">Nous Contacter</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
 
-html { scroll-behavior: smooth; }
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Qui Sommes-Nous ?</h2>
+            <div class="about-content fade-in">
+                <p>
+                    GSP L'Orangeraie est un groupe scolaire prive situe au Quartier Les Orangers, Rabat, Maroc 10100.
+                    Nous offrons une education secondaire de qualite du College au Lycee, guidant nos etudiants jusqu'au Baccalaureat.
+                    Notre engagement est de cultiver l'excellence academique et le developpement personnel de chaque eleve.
+                </p>
+            </div>
+        </div>
+    </section>
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg-warm);
-    color: var(--text-dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <h2 class="section-title">Directeur Pedagogique</h2>
+            <div class="driss-premium-profile fade-in">
+                <div class="driss-portrait-section">
+                    <div class="portrait-wrapper">
+                        <div class="driss-portrait">
+                            <img src="driss.png" alt="Driss El Aliti">
+                        </div>
+                        <div class="metric-badge metric-students">
+                            <div class="metric-icon"><i class="fas fa-users"></i></div>
+                            <div class="metric-content">
+                                <div class="metric-value">2000+</div>
+                                <div class="metric-label">Etudiants</div>
+                            </div>
+                        </div>
+                        <div class="metric-badge metric-experience">
+                            <div class="metric-icon"><i class="fas fa-star"></i></div>
+                            <div class="metric-content">
+                                <div class="metric-value">30+</div>
+                                <div class="metric-label">Ans Experience</div>
+                            </div>
+                        </div>
+                        <div class="metric-badge metric-success">
+                            <div class="metric-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="metric-content">
+                                <div class="metric-value">98%</div>
+                                <div class="metric-label">Reussite</div>
+                            </div>
+                        </div>
+                        <div class="metric-badge metric-innovation">
+                            <div class="metric-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="metric-content">
+                                <div class="metric-value">50+</div>
+                                <div class="metric-label">Innovations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="driss-profile-content">
+                    <div class="profile-header">
+                        <h1 class="profile-name">Driss El Aliti</h1>
+                        <p class="profile-title">Directeur Pedagogique Emérite</p>
+                        <div class="profile-subtitle">GSP L'Orangeraie</div>
+                    </div>
+                    <div class="profile-description">
+                        <p>
+                            Fort de plus de trois decennies de leadership educatif exceptionnel, Driss El Aliti incarne l'excellence pedagogique et l'innovation dans la transmission intergenerationnelle. Figure de proue mondialement reconnue pour son integrite intellectuelle et son devouement indefectible a l'education, il orchestre avec panache des environnements d'apprentissage stimulants, novateurs et inclusifs.
+                        </p>
+                        <p>
+                            Son expertise magistrale en strategie educative, son engagement envers l'excellence academique, et sa vision avant-gardiste de l'enseignement moderne en font un directeur pedagogique emerite, unanimement respecte et salue par ses pairs dans la communaute educative nationale et internationale.
+                        </p>
+                    </div>
+                    <div class="profile-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                            <div class="highlight-text">
+                                <h4>Excellence Pedagogique</h4>
+                                <p>Leadership reconnu dans l'innovation educative</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-book"></i></div>
+                            <div class="highlight-text">
+                                <h4>Vision Academique</h4>
+                                <p>Strategie d'enseignement progressive et inclusive</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="highlight-text">
+                                <h4>Leadership Inspirant</h4>
+                                <p>Guide des etudiants vers le succes durable</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    <section id="levels" class="levels">
+        <div class="container">
+            <h2 class="section-title">Niveaux Proposes</h2>
+            <div class="levels-grid">
+                <div class="level-card fade-in">
+                    <div class="level-icon"><i class="fas fa-backpack"></i></div>
+                    <h3>College</h3>
+                    <p>Education au niveau du secondaire inferieur, fondation solide pour les etudes futures.</p>
+                </div>
+                <div class="level-card fade-in">
+                    <div class="level-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Lycee</h3>
+                    <p>Education au niveau du secondaire superieur menant au Baccalaureat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* ── Navbar ── */
-.navbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(255,249,242,0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,122,0,0.08);
-    transition: box-shadow 0.3s;
-}
-.navbar.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>Telephone</h4>
+                            <p><a href="tel:+212666134207">0666 13 42 07</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <h4>Localisation</h4>
+                            <p>Quartier Les Orangers, Rabat, Maroc 10100</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fab fa-instagram"></i></div>
+                        <div class="info-text">
+                            <h4>Instagram</h4>
+                            <p><a href="https://www.instagram.com/lorangeraie_highschool/" target="_blank">@lorangeraie_highschool</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-.nav-container {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 24px; height: 70px;
-}
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 GSP L'Orangeraie - Tous droits reserves</p>
+            <a href="https://www.instagram.com/lorangeraie_highschool/" target="_blank" class="footer-social">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
 
-.nav-logo {
-    display: flex; align-items: center; gap: 10px;
-    font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem;
-    color: var(--green-dark);
-}
-.nav-logo i { color: var(--orange); font-size: 1.4rem; }
-
-.nav-menu { display: flex; gap: 32px; }
-.nav-link {
-    color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
-    font-weight: 500; transition: color 0.3s; position: relative;
-}
-.nav-link::after {
-    content: ''; position: absolute; bottom: -4px; left: 0;
-    width: 0; height: 2px; background: var(--orange);
-    transition: width 0.3s;
-}
-.nav-link:hover { color: var(--orange); }
-.nav-link:hover::after { width: 100%; }
-
-.hamburger {
-    display: none; flex-direction: column; gap: 5px; cursor: pointer;
-    padding: 4px;
-}
-.hamburger span {
-    display: block; width: 24px; height: 2px;
-    background: var(--green-dark); border-radius: 2px;
-    transition: 0.3s;
-}
-
-/* ── Hero ── */
-.hero {
-    position: relative; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, var(--green-darker) 0%, var(--green) 40%, var(--green-dark) 100%);
-    overflow: hidden;
-}
-.hero::before {
-    content: ''; position: absolute; inset: 0;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(255,122,0,0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(255,158,64,0.1) 0%, transparent 50%);
-}
-.hero-overlay {
-    position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.5;
-}
-
-.hero-content {
-    position: relative; z-index: 2;
-    text-align: center; padding: 24px;
-}
-
-.hero-title {
-    font-family: 'Poppins', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700; line-height: 1.1; margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 50%, #FFD700 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-tagline {
-    font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.8);
-    font-weight: 300; margin-bottom: 36px; letter-spacing: 1px;
-}
-
-.cta-btn {
-    display: inline-block; padding: 14px 40px;
-    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-    color: #fff; border: none; border-radius: 50px;
-    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
-    cursor: pointer; transition: all 0.4s;
-    box-shadow: 0 4px 20px rgba(255,122,0,0.35);
-}
-.cta-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 30px rgba(255,122,0,0.5);
-}
-
-/* ── Section Styling ── */
-section { padding: 100px 0; }
-
-.section-title {
-    font-family: 'Poppins', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700; text-align: center; margin-bottom: 60px;
-    color: var(--green-dark); position: relative;
-}
-.section-title::after {
-    content: ''; display: block; width: 60px; height: 3px;
-    background: linear-gradient(90deg, var(--orange), var(--orange-light));
-    margin: 16px auto 0; border-radius: 2px;
-}
-
-/* ── About ── */
-.about { background: var(--bg-warm); }
-.about-content {
-    max-width: 800px; margin: 0 auto;
-    background: var(--bg-card); padding: 48px 56px;
-    border-radius: var(--radius); box-shadow: var(--shadow);
-    border-left: 4px solid var(--orange);
-    font-size: 1.05rem; color: var(--text-muted); line-height: 1.8;
-}
-
-/* ── Leadership ── */
-.leadership { background: var(--bg-card); }
-
-.driss-premium-profile {
-    display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px;
-    align-items: start; max-width: 1100px; margin: 0 auto;
-}
-
-.portrait-wrapper { position: relative; }
-
-.driss-portrait {
-    width: 100%; aspect-ratio: 3/4;
-    border-radius: var(--radius); overflow: hidden;
-    box-shadow: var(--shadow);
-}
-.driss-portrait img {
-    width: 100%; height: 100%; object-fit: cover;
-    display: block;
-}
-
-.metric-badge {
-    position: absolute; display: flex; align-items: center; gap: 12px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
-    padding: 12px 18px; border-radius: var(--radius-sm);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    min-width: 160px;
-}
-.metric-icon {
-    width: 40px; height: 40px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; color: #fff; flex-shrink: 0;
-}
-.metric-students .metric-icon { background: var(--orange); }
-.metric-experience .metric-icon { background: var(--green); }
-.metric-success .metric-icon { background: #D4A74A; }
-.metric-innovation .metric-icon { background: #4A90D9; }
-
-.metric-badge:nth-child(2) { top: 20px; right: -20px; }
-.metric-badge:nth-child(3) { bottom: 25%; left: -20px; }
-.metric-badge:nth-child(4) { bottom: 10%; right: -10px; }
-.metric-badge:nth-child(5) { top: 50%; left: -30px; }
-
-.metric-value { 
-    font-family: 'Poppins', sans-serif; font-weight: 700; 
-    font-size: 1.1rem; color: var(--text-dark);
-}
-.metric-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
-
-.profile-name {
-    font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700;
-    color: var(--green-dark); margin-bottom: 4px;
-}
-.profile-title {
-    font-size: 1rem; color: var(--orange); font-weight: 600;
-    margin-bottom: 2px;
-}
-.profile-subtitle {
-    font-size: 0.85rem; color: var(--text-muted); font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.profile-description {
-    color: var(--text-muted); line-height: 1.8; margin-bottom: 28px;
-}
-.profile-description p { margin-bottom: 12px; }
-
-.profile-highlights { display: flex; flex-direction: column; gap: 16px; }
-
-.highlight-item {
-    display: flex; align-items: flex-start; gap: 16px;
-    padding: 18px 20px; background: var(--bg-warm);
-    border-radius: var(--radius-sm); transition: all 0.3s;
-}
-.highlight-item:hover {
-    transform: translateX(4px);
-    box-shadow: var(--shadow);
-}
-
-.highlight-icon {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--orange-light), var(--orange));
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 1.1rem; flex-shrink: 0;
-}
-
-.highlight-text h4 {
-    font-family: 'Poppins', sans-serif; font-size: 0.95rem;
-    font-weight: 600; color: var(--green-dark); margin-bottom: 4px;
-}
-.highlight-text p { font-size: 0.85rem; color: var(--text-muted); }
-
-/* ── Levels ── */
-.levels { background: var(--bg-warm); }
-
-.levels-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px; max-width: 900px; margin: 0 auto;
-}
-
-.level-card {
-    background: var(--bg-card); padding: 48px 36px;
-    border-radius: var(--radius); text-align: center;
-    box-shadow: var(--shadow); transition: all 0.4s;
-    border: 1px solid rgba(255,122,0,0.06);
-}
-.level-card:hover {
-    transform: translateY(-6px); box-shadow: var(--shadow-hover);
-    border-color: rgba(255,122,0,0.2);
-}
-
-.level-icon {
-    width: 72px; height: 72px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--bg-warm) 0%, rgba(255,122,0,0.1) 100%);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 20px; font-size: 1.8rem; color: var(--orange);
-    transition: all 0.4s;
-}
-.level-card:hover .level-icon {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-    color: #fff; transform: scale(1.1);
-}
-
-.level-card h3 {
-    font-family: 'Poppins', sans-serif; font-size: 1.3rem;
-    font-weight: 600; color: var(--green-dark); margin-bottom: 12px;
-}
-.level-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
-
-/* ── Contact ── */
-.contact { background: var(--bg-card); }
-
-.contact-wrapper {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    max-width: 950px; margin: 0 auto;
-}
-
-.contact-info { display: flex; flex-direction: column; gap: 20px; }
-
-.info-item {
-    display: flex; align-items: flex-start; gap: 16px;
-    padding: 20px; background: var(--bg-warm);
-    border-radius: var(--radius-sm); transition: all 0.3s;
-}
-.info-item:hover { transform: translateX(4px); }
-
-.info-icon {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--green), var(--green-dark));
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 1rem; flex-shrink: 0;
-}
-
-.info-text h4 {
-    font-family: 'Poppins', sans-serif; font-size: 0.9rem;
-    font-weight: 600; color: var(--green-dark); margin-bottom: 4px;
-}
-.info-text p, .info-text a {
-    font-size: 0.85rem; color: var(--text-muted); text-decoration: none;
-}
-.info-text a:hover { color: var(--orange); }
-
-.contact-form {
-    display: flex; flex-direction: column; gap: 16px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%; padding: 14px 18px;
-    border: 1.5px solid #E8E0D8; border-radius: var(--radius-sm);
-    font-family: 'Inter', sans-serif; font-size: 0.9rem;
-    background: var(--bg-warm); color: var(--text-dark);
-    transition: all 0.3s; outline: none;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--orange);
-    box-shadow: 0 0 0 3px rgba(255,122,0,0.1);
-    background: #fff;
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: #AAA; }
-
-.submit-btn {
-    padding: 14px 32px; border: none; border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
-    color: #fff; font-family: 'Inter', sans-serif; font-size: 1rem;
-    font-weight: 600; cursor: pointer;
-    transition: all 0.4s; align-self: flex-start;
-}
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(30,86,49,0.35);
-}
-
-/* ── Footer ── */
-.footer {
-    background: var(--green-darker); color: rgba(255,255,255,0.6);
-    text-align: center; padding: 32px 24px; font-size: 0.85rem;
-}
-.footer-content {
-    display: flex; align-items: center; justify-content: center;
-    gap: 16px; flex-wrap: wrap;
-}
-.footer-social {
-    color: rgba(255,255,255,0.4); font-size: 1.2rem;
-    transition: color 0.3s;
-}
-.footer-social:hover { color: var(--orange); }
-
-/* ── Animations ── */
-.fade-in {
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-
-/* ── Mobile ── */
-@media (max-width: 900px) {
-    .driss-premium-profile {
-        grid-template-columns: 1fr; gap: 32px;
-    }
-    .portrait-wrapper { max-width: 400px; margin: 0 auto; }
-    .metric-badge:nth-child(2) { top: 16px; right: -10px; }
-    .metric-badge:nth-child(3) { bottom: 25%; left: -10px; }
-    .metric-badge:nth-child(4) { bottom: 10%; right: 0; }
-    .metric-badge:nth-child(5) { display: none; }
-
-    .contact-wrapper { grid-template-columns: 1fr; gap: 32px; }
-    .levels-grid { grid-template-columns: 1fr; max-width: 400px; }
-}
-
-@media (max-width: 600px) {
-    .nav-menu {
-        display: none; position: fixed; top: 70px; left: 0; right: 0;
-        background: rgba(255,249,242,0.98);
-        backdrop-filter: blur(16px);
-        flex-direction: column; padding: 24px; gap: 20px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-    }
-    .nav-menu.active { display: flex; }
-    .hamburger { display: flex; }
-
-    .about-content { padding: 32px 24px; }
-    .level-card { padding: 36px 24px; }
-
-    .metric-badge {
-        padding: 8px 12px; min-width: 120px;
-    }
-    .metric-value { font-size: 0.9rem; }
-    .metric-label { font-size: 0.65rem; }
-    .metric-icon { width: 32px; height: 32px; font-size: 0.85rem; }
-}
+    <script src="script.js"></script>
+</body>
+</html>
